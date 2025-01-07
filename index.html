@@ -1,55 +1,149 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IranCoin</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iRANCOiN - پلتفرم رسمی خدمات بازارهای مالی</title>
+    
+    <!-- Bootstrap 5 RTL CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container-fluid main-container">
-    <header>
-      <h1 class="title">iRANCOiN</h1>
-    </header>
-    <div class="content">
-      <section class="box">
-        <h2>سیگنال‌ها</h2>
-        <div class="options">
-          <button class="btn btn-option">سیگنال باینری</button>
-          <button class="btn btn-option">سیگنال فیوچرز</button>
-          <button class="btn btn-option">تریدر سیگنال</button>
+    <div class="container-fluid">
+        <!-- Header Section -->
+        <header class="text-center py-5">
+            <h1 class="brand-title">iRANCOiN</h1>
+            <p class="brand-slogan">اولین و تنها پلتفرم رسمی ارائه‌ی خدمات بازارهای مالی فارکس، باینری‌آپشن و ارزهای‌دیجیتال در کشور</p>
+        </header>
+
+        <!-- Main Menu Grid -->
+        <div class="row main-menu">
+            <div class="col-md-4 menu-item" data-category="signals">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>سیگنال‌های معاملاتی</h3>
+                        <div class="submenu">
+                            <button class="btn submenu-btn" data-type="crypto">ارزهای دیجیتال</button>
+                            <button class="btn submenu-btn" data-type="forex">فارکس</button>
+                            <button class="btn submenu-btn" data-type="binary">باینری‌آپشن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 menu-item" data-category="bots">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>ربات‌های معاملاتی خودکار</h3>
+                        <div class="submenu">
+                            <button class="btn submenu-btn" data-type="crypto">ارزهای دیجیتال</button>
+                            <button class="btn submenu-btn" data-type="forex">فارکس</button>
+                            <button class="btn submenu-btn" data-type="binary">باینری‌آپشن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 menu-item" data-category="strategies">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>استراتژی و اندیکاتورها</h3>
+                        <div class="submenu">
+                            <button class="btn submenu-btn" data-type="crypto">ارزهای دیجیتال</button>
+                            <button class="btn submenu-btn" data-type="forex">فارکس</button>
+                            <button class="btn submenu-btn" data-type="binary">باینری‌آپشن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 menu-item">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>اخبار ایران‌کوین</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 menu-item">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>تصاویر نمونه‌کارها</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 menu-item" data-category="activation">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>فعال‌سازی اشتراک</h3>
+                        <div class="submenu">
+                            <button class="btn submenu-btn" data-type="crypto">ارزهای دیجیتال</button>
+                            <button class="btn submenu-btn" data-type="forex">فارکس</button>
+                            <button class="btn submenu-btn" data-type="binary">باینری‌آپشن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-      <section class="box">
-        <h2>ربات‌های معاملاتی خودکار</h2>
-        <div class="options">
-          <button class="btn btn-option">ربات کریپتو</button>
-          <button class="btn btn-option">ربات فارکس</button>
-          <button class="btn btn-option">ربات باینری</button>
+
+        <!-- Modal for Subscription Details -->
+        <div class="modal fade" id="subscriptionModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="description-short"></div>
+                        <div class="description-full"></div>
+                        <div class="subscription-options">
+                            <button class="btn btn-primary btn-weekly">اشتراک یک هفته‌ای</button>
+                            <button class="btn btn-primary btn-monthly">اشتراک یک ماهه</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-      <section class="box">
-        <h2>اشتراک‌ها</h2>
-        <div class="options">
-          <button class="btn btn-option">اشتراک ۱ ماهه</button>
-          <button class="btn btn-option">اشتراک ۳ ماهه</button>
-          <button class="btn btn-option">اشتراک ۶ ماهه</button>
+
+        <!-- Modal for Activation Form -->
+        <div class="modal fade" id="activationModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">فعال‌سازی اشتراک</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="activationForm">
+                            <div class="mb-3">
+                                <label class="form-label">هش تراکنش</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">شماره موبایل</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">ارسال اطلاعات</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
-      <section class="box">
-        <h2>تنظیمات</h2>
-        <div class="options">
-          <button class="btn btn-option">فعال‌سازی ربات</button>
-          <button class="btn btn-option">فعال‌سازی اشتراک</button>
-        </div>
-      </section>
     </div>
-  </div>
-  <footer>
-    <p>اولین پلتفرم رسمی ارائه سیگنال و ربات‌های معامله‌گر کریپتو، فارکس و باینری‌آپشن در کشور</p>
-  </footer>
-  <script src="script.js"></script>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
+              </html>
